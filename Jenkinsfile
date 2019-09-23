@@ -13,7 +13,7 @@ pipeline {
         }
 	stage('Jar') {
 	    steps {
-	        sh 'jar cvf App.jar /home/vagrant/simple-java-maven-app/src/main/java/com/mycompany/app/App.class'		
+	        sh 'jar cvf App.jar /src/main/java/com/mycompany/app/App.class'		
 	    }
 	}
 	stage('Test') {
