@@ -11,6 +11,11 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package' 
             }
         }
+	stage('Jar') {
+	    steps {
+	        jar cf app.jar /home/vagrant/simple-java-maven-app/src/main/java/com/mycompany/app/App.java		
+	    }
+	}
 	stage('Test') {
             steps {
                 sh 'mvn test'
